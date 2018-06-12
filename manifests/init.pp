@@ -41,7 +41,10 @@
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
+# The following module will deploy mediwiki application on RedHat and Debian
 #
+# Required puppet modules from puppet forge: apache,vcsrepo,mysql
+
 class mediawiki {
   if $facts['os']['family'] == 'RedHat' {
      $plist = ['php-mysql','php-xml']
